@@ -1,129 +1,215 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rajanthy's Blog - Early Childhood Achievements</title>
+    <title>Rajanthy's Blog</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background: url('background.jpg') no-repeat center center fixed; /* Add your image path */
-            background-size: cover; /* Make the background cover the screen */
+            font-family: 'Georgia', serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background: url('bg.png') no-repeat center center fixed;
+            background-size: cover;
             color: #333;
-            position: relative;
-        }
-
-        /* Overlay for text readability */
-        body::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: -1;
         }
 
         header {
             text-align: center;
-            padding: 20px;
-            color: rgb(0, 0, 0);
+            padding: 30px 0;
+            border-bottom: 2px solid #e6d0d5;
         }
 
-        header h1 {
-            margin: 0;
-            font-size: 2.5rem;
+        h1 {
+            color: #865c6c;
         }
 
-        header p {
-            font-size: 1.2rem;
-        }
-
-        main {
-            padding: 20px;
-        }
-
-        .post {
-            background: rgba(255, 255, 255, 0.9); /* Semi-transparent white for posts */
-            border: 1px solid #CDEBCC;
-            border-radius: 10px;
+        .blog-post {
+            background: white;
+            padding: 25px;
             margin: 20px 0;
-            padding: 20px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
 
-        .post h2 {
-            margin-top: 0;
+        .post-date {
+            color: #666;
+            font-style: italic;
         }
 
-        .post p {
-            margin: 10px 0;
-            line-height: 1.6;
-        }
-
-        .post img {
-            display: block;
-            margin: 10px auto;
+        img {
             max-width: 100%;
             height: auto;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
         }
 
         footer {
             text-align: center;
-            color: rgb(0, 0, 0);
-            padding: 10px 0;
+            padding: 20px;
+            margin-top: 40px;
+            border-top: 2px solid #e6d0d5;
+        }
+
+        .email-signup {
+            background: white;
+            padding: 25px;
+            margin: 20px 0;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .email-signup input[type="email"] {
+            width: 60%;
+            padding: 8px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        .email-signup button {
+            background: #865c6c;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .email-signup button:hover {
+            background: #6d4a58;
+        }
+
+        .blog-content {
+            display: none;
+        }
+
+        .blog-content.visible {
+            display: block;
+        }
+
+        .login-section {
+            display: none;
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .login-section.visible {
+            display: block;
+        }
+
+        #emailForm {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+            margin-top: 15px;
+        }
+
+        #emailForm label {
+            font-weight: bold;
+            color: #865c6c;
+        }
+
+        #emailForm input[type="email"] {
+            width: 80%;
+            padding: 12px;
+            border: 2px solid #e6d0d5;
+            border-radius: 6px;
+            font-size: 16px;
+            transition: border-color 0.3s ease;
+        }
+
+        #emailForm input[type="email"]:focus {
+            outline: none;
+            border-color: #865c6c;
+        }
+
+        #emailForm input[type="submit"] {
+            background: #865c6c;
+            color: white;
+            padding: 12px 30px;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        #emailForm input[type="submit"]:hover {
+            background: #6d4a58;
         }
     </style>
 </head>
+
 <body>
+    <header>
+        <h1>Welcome to My Blog</h1>
+        <p>Sharing my thoughts and experiences with you</p>
+    </header>
 
-<header>
-    <h1>Jegatheesan Rajanthy's Blog</h1>
-    <p>Celebrating Early Childhood Education</p>
-</header>
+    <main>
+        <section class="email-signup">
+            <h2>Login to Access the Blog</h2>
+            <p>Please enter your email address to read the blog content!</p>
+            <form id="emailForm" action="https://usebasin.com/f/3579ef0902a4" method="POST">
+                <label for="email">Email: </label>
+                <input type="email" id="email" name="email" required>
+                <input type="submit" value="Submit">
+            </form>
+        </section>
 
-<main>
-    <!-- Blog Post 1 -->
-    <div class="post">
-        <h2>Winning My First Art Competition</h2>
-        <img src="art-competition.jpg" alt="Winning Art">
-        <p>
-            It was a sunny afternoon when I stepped onto the stage to receive my first-ever art award. 
-            My painting of a rainbow garden won the hearts of the judges and marked the beginning of my artistic journey.
-        </p>
-    </div>
+        <div class="blog-content">
+            <article class="blog-post">
+                <h2>My First Blog Post</h2>
+                <p class="post-date">April 14, 2024</p>
+                <p>Welcome to my new blog! I'm excited to share my journey with all of you. Here, I'll be writing about
+                    my daily experiences, favorite recipes, gardening tips, and much more.</p>
+            </article>
 
-    <!-- Blog Post 2 -->
-    <div class="post">
-        <h2>Performing in My First Dance Recital</h2>
-        <img src="dance-recital.jpg" alt="Dance Recital Performance">
-        <p>
-            At just five years old, I performed a traditional dance at my kindergarten's annual recital. 
-            The colorful costume and cheerful applause made it an unforgettable moment.
-        </p>
-    </div>
+            <article class="blog-post">
+                <h2>Garden Updates</h2>
+                <p class="post-date">April 13, 2024</p>
+                <p>Today I spent time in my garden planting new spring flowers. The weather was perfect, and I can't
+                    wait to see everything bloom!</p>
+            </article>
 
-    <!-- Blog Post 3 -->
-    <div class="post">
-        <h2>Performing in My First Dance Recital</h2>
-        <img src="dance-recital.jpg" alt="Dance Recital Performance">
-        <p>
-            At just five years old, I performed a traditional dance at my kindergarten's annual recital. 
-            The colorful costume and cheerful applause made it an unforgettable moment.
-        </p>
-    </div>
-    
-</main>
+            <article class="blog-post">
+                <h2>Family Recipe: Apple Pie</h2>
+                <p class="post-date">April 12, 2024</p>
+                <p>I'm sharing our family's treasured apple pie recipe today. This recipe has been passed down through
+                    generations and always brings back wonderful memories.</p>
+            </article>
+        </div>
+    </main>
 
-<footer>
-    <p>&copy; 2024 Rajanthy's Blog | Made with ❤️</p>
-</footer>
-<script>
-    
-</script>
+    <footer>
+        <p>© 2024 Rajanthy's Blog | Made with ❤️</p>
+    </footer>
+
+    <script>
+        document.getElementById('emailForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            fetch(this.action, {
+                method: 'POST',
+                body: new FormData(this)
+            })
+            .then(response => {
+                if (response.ok) {
+                    document.querySelector('.email-signup').style.display = 'none';
+                    document.querySelector('.blog-content').classList.add('visible');
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                alert('There was an error submitting your email. Please try again.');
+            });
+        });
+    </script>
 </body>
+
 </html>
